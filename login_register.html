@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up / Login</title>
+    <link rel="stylesheet" href="login_register.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome Back!</h1>
+        <div class="form-container">
+            <form id="login-form">
+                <h2>Login</h2>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+               
+            </form>
+
+            <form id="signup-form" class="hidden">
+                <h2>Sign Up</h2>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Create Account</button>
+                <p>Already have an account? <a href="#login">Login</a></p>
+            </form>
+        </div>
+        <button id="toggle-form">Switch to Sign Up</button>
+    </div>
+    <script src="Face_V.js"></script>
+</body>
+</html>
