@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Features</title>
+    <link rel="stylesheet" href="features.css">
+</head>
+<body>
+    <header>
+        <h1>Face Recognition Web App</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="subscription.html">Subscription</a></li>
+                <li><a href="login_register.html">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <h2>Upload and Process an Image</h2>
+            <p>Upload an image to generate embeddings and store them in the database.</p>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="file">Upload an Image:</label>
+                    <input type="file" id="file" name="file" accept="image/*" required>
+                </div>
+                <button type="button" onclick="startDemo()">Start Demo</button>
+            </form>
+            <div id="demoResponse" class="response"></div>
+        </section>
+
+        <section class="recognition-section">
+            <h2>Start Real-Time Face Recognition</h2>
+            <p>Click the button below to start face recognition in real-time using stored embeddings.</p>
+            <button onclick="startFaceRecognition()">Start Face Recognition</button>
+            <div id="recognitionResponse" class="response"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Face Recognition Web App NSU.</p>
+    </footer>
+
+    <script>
+        // Function to handle the "Start Demo" functionality
+        function startDemo() {
+            const formData = new FormData(document.getElementById('uploadForm'));
+            fetch('http://127.0.0.1:5500/upload_image', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('demoResponse').innerText = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('demoResponse').innerText = 'Error processing the image.';
+            });
+        }
+
+        // Function to handle the "Start Face Recognition" functionality
+        function startFaceRecognition() {
+            fetch('http://127.0.0.1:5500/start_face_recognition', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('recognitionResponse').innerText = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('recognitionResponse').innerText = 'Error starting face recognition.';
+            });
+        }
+    </script>
+</body>
+</html>
+
