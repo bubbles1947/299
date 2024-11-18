@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection & Recognition Models</title>
+    <link rel="stylesheet" href="features.css">
+</head>
+<body>
+    <header>
+        <h1>Face Detection & Recognition Models</h1>
+        <p>Exploring the capabilities of cutting-edge models for face detection and recognition.</p>
+    </header>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                Face detection and recognition technologies have become an integral part of modern applications, 
+                ranging from security systems to social media platforms. Here, we explore the features, accuracy, 
+                and benefits of two prominent models: Haar Cascades and RetinaFace (with ArcFace for recognition).
+            </p>
+        </section>
+
+        <section id="haarcascades">
+            <h2>Haar Cascades</h2>
+            <p>
+                Haar Cascades, developed by Paul Viola and Michael Jones, are one of the earliest and most widely 
+                used algorithms for face detection. These are based on the concept of detecting patterns using 
+                cascading classifiers.
+            </p>
+            <ul>
+                <li><strong>Features:</strong>
+                    <ul>
+                        <li>Efficient for real-time face detection.</li>
+                        <li>Requires minimal computational resources.</li>
+                        <li>Works well for frontal face detection.</li>
+                    </ul>
+                </li>
+                <li><strong>Accuracy:</strong>
+                    <ul>
+                        <li>Good for basic face detection tasks.</li>
+                        <li>Struggles with variations in lighting, pose, or occlusions.</li>
+                    </ul>
+                </li>
+                <li><strong>Benefits:</strong>
+                    <ul>
+                        <li>Lightweight and easy to implement.</li>
+                        <li>Ideal for embedded systems or low-power devices.</li>
+                        <li>Open-source and widely available.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="retinaface">
+            <h2>RetinaFace</h2>
+            <p>
+                RetinaFace is a state-of-the-art deep learning model for face detection, leveraging advanced 
+                neural network architectures. When combined with ArcFace for face recognition, it offers highly 
+                accurate results.
+            </p>
+            <ul>
+                <li><strong>Features:</strong>
+                    <ul>
+                        <li>Detects faces with high precision, even in challenging conditions (e.g., low light, occlusions).</li>
+                        <li>Supports multi-scale face detection.</li>
+                        <li>Identifies facial landmarks for better recognition accuracy.</li>
+                    </ul>
+                </li>
+                <li><strong>Accuracy:</strong>
+                    <ul>
+                        <li>Achieves near-human-level accuracy.</li>
+                        <li>Excels in real-world scenarios with diverse datasets.</li>
+                    </ul>
+                </li>
+                <li><strong>Benefits:</strong>
+                    <ul>
+                        <li>High accuracy and reliability.</li>
+                        <li>Scalable for real-time applications.</li>
+                        <li>Ideal for security systems, biometric authentication, and advanced analytics.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="comparison">
+            <h2>Comparison</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Haar Cascades</th>
+                        <th>RetinaFace + ArcFace</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Accuracy</td>
+                        <td>Moderate</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td>Performance in Challenging Scenarios</td>
+                        <td>Poor</td>
+                        <td>Excellent</td>
+                    </tr>
+                    <tr>
+                        <td>Real-Time Suitability</td>
+                        <td>Good</td>
+                        <td>Excellent (with optimized hardware)</td>
+                    </tr>
+                    <tr>
+                        <td>Complexity</td>
+                        <td>Low</td>
+                        <td>High</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>
+                Choosing the right face detection and recognition model depends on the application's requirements. 
+                While Haar Cascades are suitable for lightweight and real-time applications, RetinaFace and ArcFace 
+                offer unmatched accuracy and reliability for advanced use cases.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Face Recognition NSU</p>
+    </footer>
+</body>
+</html>
