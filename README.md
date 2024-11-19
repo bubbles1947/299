@@ -13,3 +13,6 @@ are required to run the program in the web(frontend and backend)
 these part is work in progress.
 
 face_V.html/css are for the homepage.
+
+app.py works with testguiwithoutgui.py
+appflask.py works with old gui script testGUI3.py
