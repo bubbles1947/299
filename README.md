@@ -16,3 +16,5 @@ face_V.html/css are for the homepage.
 
 app.py works with testguiwithoutgui.py
 appflask.py works with old gui script testGUI3.py
+
+THE COMPLETE PROJECT IS IN NEW FACE.RAR FILE JUST DOWNLAOD AND EXTARCT IT WITH THE REQUIRED DEPENDICIES.
